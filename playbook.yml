@@ -1,0 +1,13 @@
+---
+- name: Installing the packages
+  hosts: all
+  tasks:
+    - name: Install the httpd package
+      yum: httpd
+       name: httpd
+       state: present
+    - name: Service restart
+      service:
+        name: httpd
+        state: restarted
+...
