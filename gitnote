@@ -1,0 +1,97 @@
+NEW GIT DETAILS :
+
+mspsoft4@gmail.com
+SivaDhanu@2024
+
+GITHUB :
+
+GitHub
+GitLadb
+BitBucket (Old name Stash)
+SVN
+CVS
+TFS
+
+In the organization we won't use public github url. Each and every company will have own github url's.
+
+If any new project onboarded then below mentioned will do.
+-- Create Orginzation
+			=https://github.com/MSRSOFTWARE
+-- Create Repo
+-- Create Teams ==> wallmart-devteam,wallmart-dba
+-- Add the users in teams
+-- Provide the repo access to the team.
+
+
+
+How to create the organization, repository, teams ,add the users in the team and repository into teams..
+
+Created organization and url.
+
+https://github.com/MSRSOFTWARE
+
+Note : In the organization we will get the funcationid insted mail we need to use.
+
+Once We created the organization we need to create repository under the this organization.
+
+Created the repository and url below.
+
+https://github.com/MSRSOFTWARE/wallmart.git ---> https url
+
+git@github.com:MSRSOFTWARE/wallmart.git ---> ssh url.
+
+created the teams in the organization.
+
+https://github.com/orgs/MSRSOFTWARE/teams/wallmartteam
+
+add the members in the teams. We have to search with the github username send the notification and user will get email he will accept but in the real won't get mail by default he will accept.
+
+Add the repository into the teams.
+
+
+How to change private to public or public to private repository.
+
+In the repository settings we will see the danger option and under danger option change visibility option.. 
+
+
+
+GIT COMMANDS : 
+
+How to check git version ==> git --version
+How to initialize the git ==> git init --> Once initialized it will create .git directory.
+They are three logical areas :
+
+working-Area								Staging-Area				Local-Area
+Created files in the code of the location ---> git add       ------> git commit -m "comment"
+
+
+
+To add the files into the staging area ==> git add
+To check status of git staging or not ==> git status
+to add the source code files into the local area ==> git commit -m "comment" (-m means message)
+[Oto stage and commit at a time ==> git commit -a -m "<message>"
+
+For developing java projects source code developer will use IDE's :
+Developer will use the IDE's ==> Popular IDE's Eclipse, Intellij,VSC,Atom
+IDE's ==> Integrated Development Environments
+
+
+How to configure the github user name and email
+git config --global user.name "<user name>"
+git config --global user.email "<user mail>"
+
+how to check commit id's in the git ==> git log
+How to check last 2 commit id's in the git ==> git log -2
+To listout the user details in the git. ==> git config --global --list
+How to check no.of users are modified particular file ==> git log <file name>
+
+How to configure git hub repo into local repository.
+Syntax : git remote add <alias name> <git hub repo url>
+Ex : git remote add wm https://github.com/MSRSOFTWARE/wallmart.git
+
+to check git remote repository url's ==> git remote -v
+
+
+How to push the source code into git remote repository
+git push <alias name> <branch name>
+git push wm master
