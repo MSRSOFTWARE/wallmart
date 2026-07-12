@@ -69,7 +69,7 @@ Created files in the code of the location ---> git add       ------> git commit 
 To add the files into the staging area ==> git add
 To check status of git staging or not ==> git status
 to add the source code files into the local area ==> git commit -m "comment" (-m means message)
-[Oto stage and commit at a time ==> git commit -a -m "<message>"
+to stage and commit at a time ==> git commit -a -m "<message>"
 
 For developing java projects source code developer will use IDE's :
 Developer will use the IDE's ==> Popular IDE's Eclipse, Intellij,VSC,Atom
@@ -79,6 +79,7 @@ IDE's ==> Integrated Development Environments
 How to configure the github user name and email
 git config --global user.name "<user name>"
 git config --global user.email "<user mail>"
+git config remove <user name> ==to remove the user
 
 how to check commit id's in the git ==> git log
 How to check last 2 commit id's in the git ==> git log -2
@@ -95,3 +96,73 @@ to check git remote repository url's ==> git remote -v
 How to push the source code into git remote repository
 git push <alias name> <branch name>
 git push wm master
+
+How to see commit information in that file ==> git show <commit id>
+
+git reset ===> which files are available in the staging area to recall to working area.
+git reset <file name> ==> particular file will be recalled into working area from the staging area.
+
+
+How to revert the change in the file using git revert command
+or
+One of the developer did some mistakes in the file then how to the changes.
+Setp-1: First check the commit id
+git log
+Step-2: Now revert the changes.
+git revert <commit-id>
+Step-3: Push the code into the git repository
+git push -u <repo name> <branch name>
+
+Note : We need to revert only recent commit id only not old commit id's
+
+What is difference between git reset and git revert.
+
+VCS : Version Control System.
+
+
+git 
+svn
+tfs
+cvs
+All above are the VCS(version control system)
+
+github
+gitlab
+bitbucket
+
+all above are Source Code Management it is centrailized remote repo. It will provide the GUI . Github is a hosted service for git.
+
+GIT vs SVN
+GIT vs TFS
+GIT vs CVS
+ Ans : Git is DVCS (Distrbuted VCS) and SVN,TFS,CVS  are the VCS. 
+ It means in the git developer will work local repo and developer will push into centralrepository but in the SVN/TFS/CVS  direcotly dev to work with the central repository when central repository will have issue then dev won't able work but in the git he will work in the local repo laster he will push the code into repo.
+
+
+
+How to exlcude the some file in the git
+Step-1: create the .gitignore file
+touch .gitignore
+Step-2: add those files into the .gitignore file.
+vi .gitignore
+.project
+.classpath
+/mydir ==> for direcotly we need to add /
+
+
+
+BRANCHES :
+
+How to check branches in the local repo ==> git branch
+How to create the branch ==> git branch <branch name> Ex : git branch development
+How to delete the branch ==> git branch -d <branch name> Ex : git branch -d qa
+How to switch the brnaches ==> git checkout <branch name> Ex : git checkout development
+
+How to compare the one and another branch ==> git diff <branch name>.
+Note : we should in the master brnach and comparing with the development branch.
+git diff development
+
+How to merge the code from the one brnach to another branch. Ex : development branch to master
+git merge <target branch name>
+Ex : git merge development
+Note : we should be source branch.
